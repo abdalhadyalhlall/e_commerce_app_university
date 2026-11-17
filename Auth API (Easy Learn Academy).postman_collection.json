@@ -1,0 +1,442 @@
+{
+  "info": {
+    "_postman_id": "c214df38-7102-4237-9aeb-99d39b85c629",
+    "name": "Auth API (Easy Learn Academy)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "34114768"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "OTP",
+          "item": [
+            {
+              "name": "verify",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "wQ9KxY7nP2LrA5FmD8TsV1BhE6JzNc4UyRg3KqXpWoMf7CdSaHt9LeIk2On8GbYu",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"kemmoutufroza-4817@yopmail.com\",\r\n    \"otp_code\": \"955672\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/client/otp/verify",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "client",
+                    "otp",
+                    "verify"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "resend",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "wQ9KxY7nP2LrA5FmD8TsV1BhE6JzNc4UyRg3KqXpWoMf7CdSaHt9LeIk2On8GbYu",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"a7medelbattal@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/client/otp/resend",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "client",
+                    "otp",
+                    "resend"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "wQ9KxY7nP2LrA5FmD8TsV1BhE6JzNc4UyRg3KqXpWoMf7CdSaHt9LeIk2On8GbYu",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"kemmoutufroza-4817@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/client/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "client",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "wQ9KxY7nP2LrA5FmD8TsV1BhE6JzNc4UyRg3KqXpWoMf7CdSaHt9LeIk2On8GbYu",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/client/logout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "client",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "wQ9KxY7nP2LrA5FmD8TsV1BhE6JzNc4UyRg3KqXpWoMf7CdSaHt9LeIk2On8GbYu",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Ahmed Elbatal",
+                  "type": "text",
+                  "uuid": "0bd9f95e-86be-4cd1-b7ef-9d2407cd06c4"
+                },
+                {
+                  "key": "email",
+                  "value": "a7medelbattal@gmail.com",
+                  "type": "text",
+                  "uuid": "17c47923-8e53-4d7d-971e-1b413a6ce682"
+                },
+                {
+                  "key": "phone",
+                  "value": "+201013114673",
+                  "type": "text",
+                  "uuid": "15a7e905-b672-468f-955a-b487bf22fe0a"
+                },
+                {
+                  "key": "password",
+                  "value": "123456",
+                  "type": "text",
+                  "uuid": "2db0b204-21ec-4910-a5ad-6a879401b1f0"
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "123456",
+                  "type": "text",
+                  "uuid": "57527197-731e-4523-b901-226066213b8c"
+                },
+                {
+                  "key": "address",
+                  "value": "Cairo, Egypt",
+                  "type": "text",
+                  "uuid": "f0a5dc31-faaf-4cb8-86e4-a73bdc498b72",
+                  "description": "optional"
+                },
+                {
+                  "key": "latitude",
+                  "value": "30.033333",
+                  "type": "text",
+                  "uuid": "3a174062-9aca-4d7c-8c13-a9a927e49ea4",
+                  "description": "optional"
+                },
+                {
+                  "key": "longitude",
+                  "value": "31.233334",
+                  "type": "text",
+                  "uuid": "78348d9c-8ea4-4f24-951a-29130c110322",
+                  "description": "optional"
+                },
+                {
+                  "key": "picture",
+                  "type": "file",
+                  "uuid": "65f87d83-db7a-4b00-bbe2-52f6a7192f45",
+                  "description": "optional",
+                  "src": "postman-cloud:///1f148c99-c5af-48b0-aee2-a864ed31eece"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/client/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "client",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer"
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "profile",
+      "item": [
+        {
+          "name": "profile",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "wQ9KxY7nP2LrA5FmD8TsV1BhE6JzNc4UyRg3KqXpWoMf7CdSaHt9LeIk2On8GbYu",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/client/profile",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "client",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "wQ9KxY7nP2LrA5FmD8TsV1BhE6JzNc4UyRg3KqXpWoMf7CdSaHt9LeIk2On8GbYu",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Ahmed Elbatal",
+                  "type": "text",
+                  "uuid": "0bd9f95e-86be-4cd1-b7ef-9d2407cd06c4"
+                },
+                {
+                  "key": "email",
+                  "value": "kemmoutufroza-4817@yopmail.com",
+                  "type": "text",
+                  "uuid": "17c47923-8e53-4d7d-971e-1b413a6ce682"
+                },
+                {
+                  "key": "phone",
+                  "value": "+201013114673",
+                  "type": "text",
+                  "uuid": "15a7e905-b672-468f-955a-b487bf22fe0a"
+                },
+                {
+                  "key": "address",
+                  "value": "Cairo, Egypt",
+                  "type": "text",
+                  "uuid": "f0a5dc31-faaf-4cb8-86e4-a73bdc498b72",
+                  "description": "optional"
+                },
+                {
+                  "key": "latitude",
+                  "value": "30.033333",
+                  "type": "text",
+                  "uuid": "3a174062-9aca-4d7c-8c13-a9a927e49ea4",
+                  "description": "optional"
+                },
+                {
+                  "key": "longitude",
+                  "value": "31.233334",
+                  "type": "text",
+                  "uuid": "78348d9c-8ea4-4f24-951a-29130c110322",
+                  "description": "optional"
+                },
+                {
+                  "key": "picture",
+                  "type": "file",
+                  "uuid": "65f87d83-db7a-4b00-bbe2-52f6a7192f45",
+                  "description": "optional",
+                  "src": "postman-cloud:///1f148c99-c5af-48b0-aee2-a864ed31eece"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/client/profile/update",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "client",
+                "profile",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": ""
+    },
+    {
+      "key": "x-api-key",
+      "value": ""
+    },
+    {
+      "key": "token",
+      "secret": true
+    }
+  ]
+}
